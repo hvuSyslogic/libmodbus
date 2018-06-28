@@ -7,11 +7,11 @@
  */
 
 /* The source directory, relative to the one where this file resides. */
-var srcDir = "..";
+/*var srcDir = "..";*/
 /* Base name of what we are building. */
 var baseName = "modbus";
 /* Configure file template and output file */
-var configFile = srcDir + "\\..\\configure.ac";
+var configFile = "..\\..\\configure.ac";
 /* Input and output files for the modbus-version.h include */
 var newfile;
 /* Version strings for the binary distribution. Will be filled later in the code. */
@@ -139,8 +139,8 @@ if (error !== 0) {
 	WScript.Quit(error);
 }
 
-newfile = srcDir + "\\modbus-version.h";
-createVersionedFile(newfile, srcDir + "\\modbus-version.h.in");
+newfile = "..\\modbus-version.h";
+createVersionedFile(newfile, "..\\modbus-version.h.in");
 if (error !== 0) {
 	WScript.Echo("Creation of " + newfile + " failed, aborting.");
 	WScript.Quit(error);
